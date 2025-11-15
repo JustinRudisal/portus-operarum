@@ -1,0 +1,73 @@
+# Anno Mod Development .gitignore
+
+# Build outputs
+*.rda
+*.rdp
+*.rdm
+build/
+dist/
+output/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# RDA Tools temporary files
+rda_output/
+unpacked/
+
+# Python cache (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.so
+
+# Node modules (if using Node.js tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Archive files
+*.zip
+*.7z
+*.rar
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Backup files from text editors
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# Personal notes and scratch files
+notes.txt
+scratch.txt
+TODO.txt
+PERSONAL.md

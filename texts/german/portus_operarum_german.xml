@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    German localization for Portus Operarum
+    
+    Struktur:
+    - GUID muss mit Asset-GUIDs übereinstimmen
+    - Text-Elemente liefern In-Game-Strings
+    - Description liefert Tooltip-Text
+  -->
+  
+  <!-- Gebäudename und Beschreibung -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000001</GUID>
+      <Text>Portus Operarum</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000001</GUID>
+      <Text>Ein spezialisierter Hafen, der den Austausch von Arbeitskräften zwischen Inseln ermöglicht. Arbeiter können von anderen Inseln pendeln, um bei Arbeitskräftemangel zu helfen. Verbinden Sie mehrere Inseln, um ein effizientes Arbeitskräfte-Netzwerk zu schaffen.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- Freischaltbedingung Text -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000002</GUID>
+      <Text>Portus Operarum freischalten</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- UI-Strings -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000100</GUID>
+      <Text>Arbeitskräftetransport</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000101</GUID>
+      <Text>Verbundene Inseln</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000102</GUID>
+      <Text>Aktive Pendler</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- Statusmeldungen -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000200</GUID>
+      <Text>Portus Operarum betriebsbereit</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000201</GUID>
+      <Text>Keine Verbindung zu anderen Inseln</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000202</GUID>
+      <Text>Arbeiter pendeln</Text>
+    </Text>
+  </ModOp>
+  
+</ModOps>

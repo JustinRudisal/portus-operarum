@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    TEMPLATE FILE: Use this as a starting point for new assets
+    
+    Instructions:
+    1. Copy this template
+    2. Choose appropriate GUID from GUID_REGISTRY.md
+    3. Update all placeholder values
+    4. Add corresponding localization
+    5. Test thoroughly
+    6. Update GUID_REGISTRY.md
+  -->
+  
+  <!-- TEMPLATE: Basic Building -->
+  <ModOp Type="addNextSibling" GUID="BASE_BUILDING_GUID">
+    <Asset>
+      <Template>Building</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_GUID_HERE</GUID>
+          <Name>Your Building Name</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_your_building.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>YourType</BuildingType> <!-- Harbor, Production, PublicService, etc. -->
+          <AssociatedRegion>Moderate</AssociatedRegion> <!-- Or other region -->
+        </Building>
+        <Blocking>
+          <BlockingType>Building</BlockingType>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient> <!-- Gold -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient> <!-- Wood -->
+              <Amount>5</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient> <!-- Stone -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/your_building/your_building.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <MaintenanceCost>
+          <Inactive>
+            <Amount>10</Amount>
+          </Inactive>
+          <Active>
+            <Amount>25</Amount>
+          </Active>
+        </MaintenanceCost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Production Building -->
+  <ModOp Type="addNextSibling" GUID="BASE_PRODUCTION_GUID">
+    <Asset>
+      <Template>ProductionBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_PRODUCTION_GUID</GUID>
+          <Name>Your Production Building</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_your_production.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>Production</BuildingType>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>500</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/your_production/your_production.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <ProductionBuilding>
+          <ProductionTime>30</ProductionTime> <!-- seconds -->
+          <IsWorkshop>1</IsWorkshop>
+        </ProductionBuilding>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>INPUT_PRODUCT_GUID</Product>
+              <Amount>1</Amount>
+              <StorageAmount>5</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>OUTPUT_PRODUCT_GUID</Product>
+              <Amount>1</Amount>
+              <StorageAmount>5</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+        </FactoryBase>
+        <MaintenanceCost>
+          <Inactive>
+            <Amount>25</Amount>
+          </Inactive>
+          <Active>
+            <Amount>50</Amount>
+          </Active>
+        </MaintenanceCost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Public Service Building -->
+  <ModOp Type="addNextSibling" GUID="BASE_SERVICE_GUID">
+    <Asset>
+      <Template>PublicService</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_SERVICE_GUID</GUID>
+          <Name>Your Service Building</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_your_service.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>PublicService</BuildingType>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>300</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/your_service/your_service.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <PublicService>
+          <PublicServiceType>Custom</PublicServiceType>
+          <PublicServiceRange>25</PublicServiceRange>
+          <PublicServiceFullSatisfactionDistance>15</PublicServiceFullSatisfactionDistance>
+        </PublicService>
+        <MaintenanceCost>
+          <Inactive>
+            <Amount>15</Amount>
+          </Inactive>
+          <Active>
+            <Amount>30</Amount>
+          </Active>
+        </MaintenanceCost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Product/Resource -->
+  <ModOp Type="addNextSibling" GUID="BASE_PRODUCT_GUID">
+    <Asset>
+      <Template>Product</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_PRODUCT_GUID</GUID>
+          <Name>Your Product</Name>
+          <IconFilename>data/ui/2kimages/main/icons/icon_your_product.png</IconFilename>
+        </Standard>
+        <Product>
+          <ProductCategory>YourCategory</ProductCategory>
+          <StorageLevel>Building</StorageLevel>
+          <BasePrice>100</BasePrice>
+        </Product>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Unlock Condition -->
+  <ModOp Type="addNextSibling" GUID="BASE_UNLOCK_GUID">
+    <Asset>
+      <Template>UnlockCondition</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_UNLOCK_GUID</GUID>
+          <Name>Unlock Your Feature</Name>
+        </Standard>
+        <UnlockCondition>
+          <UnlockCondition>
+            <Item>
+              <RequiredPopulation>
+                <PopulationLevel>POPULATION_TIER_GUID</PopulationLevel>
+                <Amount>100</Amount> <!-- Number of residents -->
+              </RequiredPopulation>
+            </Item>
+          </UnlockCondition>
+        </UnlockCondition>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Upgrade Item -->
+  <ModOp Type="addNextSibling" GUID="BASE_UPGRADE_GUID">
+    <Asset>
+      <Template>UpgradeItem</Template>
+      <Values>
+        <Standard>
+          <GUID>YOUR_UPGRADE_GUID</GUID>
+          <Name>Your Upgrade</Name>
+          <IconFilename>data/ui/2kimages/main/icons/icon_your_upgrade.png</IconFilename>
+        </Standard>
+        <UpgradeItem>
+          <AppliedTo>
+            <Item>
+              <Target>TARGET_BUILDING_GUID</Target>
+            </Item>
+          </AppliedTo>
+          <Modifiers>
+            <Modifier>
+              <Type>ProductionSpeed</Type>
+              <Value>150</Value> <!-- 150% = 50% increase -->
+            </Modifier>
+            <Modifier>
+              <Type>MaintenanceCost</Type>
+              <Value>110</Value> <!-- 110% = 10% increase -->
+            </Modifier>
+          </Modifiers>
+        </UpgradeItem>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>1000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- TEMPLATE: Modify Existing Asset -->
+  <ModOp Type="merge" GUID="EXISTING_ASSET_GUID" Path="/Values/Cost/Costs">
+    <!-- Add or modify cost -->
+    <Item>
+      <Ingredient>1010017</Ingredient>
+      <Amount>5000</Amount>
+    </Item>
+  </ModOp>
+  
+  <!-- TEMPLATE: Remove Element -->
+  <ModOp Type="remove" GUID="EXISTING_ASSET_GUID" Path="/Values/SpecificElement/ToRemove" />
+  
+</ModOps>

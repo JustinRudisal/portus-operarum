@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    English localization for Portus Operarum
+    
+    Structure:
+    - GUID must match asset GUIDs
+    - Text elements provide in-game strings
+    - Description provides tooltip text
+  -->
+  
+  <!-- Building Name and Description -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000001</GUID>
+      <Text>Portus Operarum</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000001</GUID>
+      <Text>A specialized wharf that enables workforce sharing between islands. Workers can commute from other islands to help with labor shortages. Connect multiple islands to create an efficient labor network.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- Unlock Condition Text -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000002</GUID>
+      <Text>Unlock Portus Operarum</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- UI Strings -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000100</GUID>
+      <Text>Workforce Transportation</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000101</GUID>
+      <Text>Connected Islands</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000102</GUID>
+      <Text>Active Commuters</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- Status Messages -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000200</GUID>
+      <Text>Portus Operarum operational</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000201</GUID>
+      <Text>No connection to other islands</Text>
+    </Text>
+  </ModOp>
+  
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1742000202</GUID>
+      <Text>Workers commuting</Text>
+    </Text>
+  </ModOp>
+  
+</ModOps>

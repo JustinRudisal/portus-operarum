@@ -1,0 +1,32 @@
+{
+  "Version": "1.0.0",
+  "ModID": "portus_operarum_mod",
+  "Category": {
+    "Default": "Gameplay"
+  },
+  "ModName": {
+    "English": "Portus Operarum",
+    "German": "Portus Operarum"
+  },
+  "Description": {
+    "English": "A lore-friendly workforce-sharing wharf for Anno 117, inspired by the commuter pier from Anno 1800. Allows workers to commute between islands to help with labor shortages.",
+    "German": "Ein lore-freundlicher Arbeitskräfte-Austausch-Hafen für Anno 117, inspiriert vom Pendlerpier aus Anno 1800. Ermöglicht es Arbeitern, zwischen Inseln zu pendeln, um Arbeitskräftemangel zu beheben."
+  },
+  "CreatorName": "Your Name Here",
+  "CreatorContact": "https://github.com/JustinRudisal/portus-operarum",
+  "KnownIssues": {
+    "English": "None reported yet",
+    "German": "Noch keine bekannt"
+  },
+  "Image": "banner.png",
+  "DLCDependencies": [],
+  "ModDependencies": [],
+  "IncompatibleMods": [],
+  "LoadAfterMods": [],
+  "Category": {
+    "Default": "Gameplay",
+    "GermanMap": {
+      "Gameplay": "Gameplay"
+    }
+  }
+}

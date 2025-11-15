@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!-- 
+    This file demonstrates inheritance patterns for Anno 117 mods.
+    It shows how to create new assets based on existing game assets.
+    
+    GUID Structure:
+    - Use placeholder GUIDs starting from 1742000000 for custom assets
+    - Always increment by 1 for each new asset
+    - Keep a GUID registry to avoid conflicts
+  -->
+  
+  <!-- Example: Create a new harbor building based on existing harbor -->
+  <ModOp Type="addNextSibling" GUID="100451">
+    <!-- 100451 is a placeholder GUID for a generic harbor building -->
+    <Asset>
+      <Template>Building</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000001</GUID>
+          <Name>Portus Operarum Wharf</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_portus_operarum.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>Harbor</BuildingType>
+          <BuildModeRandomRotation>90</BuildModeRandomRotation>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking>
+          <BlockingType>Building</BlockingType>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient> <!-- Gold -->
+              <Amount>2500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient> <!-- Wood -->
+              <Amount>10</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010205</Ingredient> <!-- Stone -->
+              <Amount>15</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/portus_operarum/portus_operarum.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection>
+          <ParticipantMessageArcheType>Harbourmaster_arch</ParticipantMessageArcheType>
+          <Colors>
+            <WeakSelectionColorType>NoColor</WeakSelectionColorType>
+          </Colors>
+        </Selection>
+        <Constructable />
+        <Locked>
+          <DefaultLockedState>0</DefaultLockedState>
+        </Locked>
+        <SoundEmitter>
+          <ActiveSounds>
+            <Item>
+              <Sound>214935</Sound> <!-- Generic harbor ambience -->
+            </Item>
+          </ActiveSounds>
+        </SoundEmitter>
+        <FeedbackController />
+        <Infolayer />
+        <UpgradeList />
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- Example: Add unlock condition -->
+  <ModOp Type="addNextSibling" GUID="1742000001">
+    <Asset>
+      <Template>UnlockCondition</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000002</GUID>
+          <Name>Unlock Portus Operarum</Name>
+        </Standard>
+        <UnlockCondition>
+          <UnlockCondition>
+            <Item>
+              <RequiredPopulation>
+                <PopulationLevel>1010343</PopulationLevel> <!-- Example population tier -->
+                <Amount>500</Amount>
+              </RequiredPopulation>
+            </Item>
+          </UnlockCondition>
+        </UnlockCondition>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- Example: Modify existing asset -->
+  <ModOp Type="merge" GUID="100451" Path="/Values/Standard/Name">
+    <Name>Modified Harbor Name</Name>
+  </ModOp>
+  
+</ModOps>

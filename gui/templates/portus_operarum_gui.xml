@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    GUI Template for Portus Operarum
+    
+    This demonstrates how to create custom UI elements for Anno 117 mods.
+    GUI elements can be used for building info panels, statistics, and custom menus.
+  -->
+  
+  <!-- Example: Custom Info Panel for Portus Operarum Building -->
+  <ModOp Type="add" Path="//GuiConfig/Template[@Name='BuildingMenu']">
+    <Template Name="PortusOperarumInfoPanel">
+      <InfoPanel>
+        <Title>
+          <TextGUID>1742000001</TextGUID> <!-- Building Name -->
+        </Title>
+        <Sections>
+          <Section>
+            <Title>
+              <TextGUID>1742000100</TextGUID> <!-- Workforce Transportation -->
+            </Title>
+            <Content>
+              <InfoLine>
+                <Label>
+                  <TextGUID>1742000101</TextGUID> <!-- Connected Islands -->
+                </Label>
+                <Value>
+                  <PropertyPath>ConnectedIslands</PropertyPath>
+                </Value>
+              </InfoLine>
+              <InfoLine>
+                <Label>
+                  <TextGUID>1742000102</TextGUID> <!-- Active Commuters -->
+                </Label>
+                <Value>
+                  <PropertyPath>ActiveCommuters</PropertyPath>
+                </Value>
+              </InfoLine>
+            </Content>
+          </Section>
+          <Section>
+            <Title>
+              <Text>Status</Text>
+            </Title>
+            <Content>
+              <StatusIndicator>
+                <PropertyPath>OperationalStatus</PropertyPath>
+                <States>
+                  <State Value="Operational">
+                    <TextGUID>1742000200</TextGUID>
+                    <Color>Green</Color>
+                  </State>
+                  <State Value="NoConnection">
+                    <TextGUID>1742000201</TextGUID>
+                    <Color>Yellow</Color>
+                  </State>
+                  <State Value="Working">
+                    <TextGUID>1742000202</TextGUID>
+                    <Color>Blue</Color>
+                  </State>
+                </States>
+              </StatusIndicator>
+            </Content>
+          </Section>
+        </Sections>
+      </InfoPanel>
+    </Template>
+  </ModOp>
+  
+  <!-- Example: Add button to building menu -->
+  <ModOp Type="add" Path="//GuiConfig/BuildingMenuConfig">
+    <Button>
+      <Name>PortusOperarumControl</Name>
+      <Icon>data/ui/2kimages/main/icons/icon_commuter.png</Icon>
+      <TooltipGUID>1742000001</TooltipGUID>
+      <Action>OpenPortusOperarumPanel</Action>
+      <VisibleFor>
+        <BuildingGUID>1742000001</BuildingGUID>
+      </VisibleFor>
+    </Button>
+  </ModOp>
+  
+</ModOps>

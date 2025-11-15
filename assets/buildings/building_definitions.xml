@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    Building Definitions for Portus Operarum
+    
+    This file demonstrates various building definition patterns:
+    - Production buildings
+    - Public services
+    - Harbor structures
+    - Decorative elements
+  -->
+  
+  <!-- Production Chain Example: Worker Ferry Service -->
+  <ModOp Type="addNextSibling" GUID="1742000001">
+    <Asset>
+      <Template>ProductionBuilding</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000010</GUID>
+          <Name>Worker Ferry</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_worker_ferry.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>Production</BuildingType>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient> <!-- Gold -->
+              <Amount>1000</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient> <!-- Wood -->
+              <Amount>5</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/worker_ferry/worker_ferry.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <ProductionBuilding>
+          <ProductionTime>30</ProductionTime>
+          <IsWorkshop>1</IsWorkshop>
+        </ProductionBuilding>
+        <FactoryBase>
+          <FactoryInputs>
+            <Item>
+              <Product>1742000020</Product> <!-- Workers (custom resource) -->
+              <Amount>10</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryInputs>
+          <FactoryOutputs>
+            <Item>
+              <Product>1742000021</Product> <!-- Transported Workers -->
+              <Amount>10</Amount>
+              <StorageAmount>20</StorageAmount>
+            </Item>
+          </FactoryOutputs>
+        </FactoryBase>
+        <MaintenanceCost>
+          <Inactive>
+            <Amount>50</Amount>
+          </Inactive>
+          <Active>
+            <Amount>100</Amount>
+          </Active>
+        </MaintenanceCost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- Public Service Example: Commuter Station -->
+  <ModOp Type="addNextSibling" GUID="1742000010">
+    <Asset>
+      <Template>PublicService</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000011</GUID>
+          <Name>Commuter Station</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_commuter_station.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>PublicService</BuildingType>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking />
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>500</Amount>
+            </Item>
+            <Item>
+              <Ingredient>1010196</Ingredient>
+              <Amount>3</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/buildings/commuter_station/commuter_station.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <PublicService>
+          <PublicServiceType>Custom</PublicServiceType>
+          <PublicServiceRange>20</PublicServiceRange>
+          <PublicServiceFullSatisfactionDistance>10</PublicServiceFullSatisfactionDistance>
+        </PublicService>
+        <MaintenanceCost>
+          <Inactive>
+            <Amount>25</Amount>
+          </Inactive>
+          <Active>
+            <Amount>50</Amount>
+          </Active>
+        </MaintenanceCost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- Decorative Element Example -->
+  <ModOp Type="addNextSibling" GUID="1742000011">
+    <Asset>
+      <Template>Ornament</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000012</GUID>
+          <Name>Portus Operarum Sign</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_portus_sign.png</IconFilename>
+        </Standard>
+        <Building>
+          <BuildingType>Ornament</BuildingType>
+          <AssociatedRegion>Moderate</AssociatedRegion>
+        </Building>
+        <Blocking>
+          <BlockingType>Ornament</BlockingType>
+        </Blocking>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>50</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+        <Object>
+          <Variations>
+            <Item>
+              <Filename>data/graphics/ornaments/portus_sign/portus_sign.cfg</Filename>
+            </Item>
+          </Variations>
+        </Object>
+        <Mesh />
+        <Selection />
+        <Constructable />
+        <Ornamental>
+          <OrnamentType>Street</OrnamentType>
+        </Ornamental>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+  <!-- Upgrade Example: Enhanced Ferry Service -->
+  <ModOp Type="addNextSibling" GUID="1742000012">
+    <Asset>
+      <Template>UpgradeItem</Template>
+      <Values>
+        <Standard>
+          <GUID>1742000013</GUID>
+          <Name>Enhanced Ferry Upgrade</Name>
+          <IconFilename>data/ui/2kimages/main/3dicons/icon_ferry_upgrade.png</IconFilename>
+        </Standard>
+        <UpgradeItem>
+          <AppliedTo>
+            <Item>
+              <Target>1742000010</Target> <!-- Worker Ferry -->
+            </Item>
+          </AppliedTo>
+          <Modifiers>
+            <Modifier>
+              <Type>ProductionSpeed</Type>
+              <Value>150</Value> <!-- 50% increase -->
+            </Modifier>
+            <Modifier>
+              <Type>MaintenanceCost</Type>
+              <Value>125</Value> <!-- 25% increase in maintenance -->
+            </Modifier>
+          </Modifiers>
+        </UpgradeItem>
+        <Cost>
+          <Costs>
+            <Item>
+              <Ingredient>1010017</Ingredient>
+              <Amount>2000</Amount>
+            </Item>
+          </Costs>
+        </Cost>
+      </Values>
+    </Asset>
+  </ModOp>
+  
+</ModOps>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModOps>
+  <!--
+    LOCALIZATION TEMPLATE
+    
+    Use this template when adding new text to your mod.
+    
+    Instructions:
+    1. Copy the appropriate template below
+    2. Replace YOUR_GUID_HERE with actual GUID from GUID_REGISTRY.md
+    3. Replace "Your text here" with actual text
+    4. Add to both english/ and german/ folders
+    5. Translate appropriately for each language
+    
+    Text Categories:
+    - Building Names
+    - Building Descriptions (tooltips)
+    - UI Labels
+    - Status Messages
+    - Dialog Text
+    - Tutorial Text
+  -->
+  
+  <!-- TEMPLATE: Building Name -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_BUILDING_GUID</GUID>
+      <Text>Your Building Name</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Building Description (Tooltip) -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_BUILDING_GUID</GUID>
+      <Text>Your building description. Explains what it does and how to use it.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: UI Label -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_UI_LABEL_GUID</GUID>
+      <Text>UI Label Text</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Status Message -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_STATUS_GUID</GUID>
+      <Text>Status message text</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Product Name -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_PRODUCT_GUID</GUID>
+      <Text>Product Name</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Product Description -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_PRODUCT_GUID</GUID>
+      <Text>Product description explaining what this resource is used for.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Upgrade Name -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_UPGRADE_GUID</GUID>
+      <Text>Upgrade Name</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Upgrade Description -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_UPGRADE_GUID</GUID>
+      <Text>Upgrade description explaining the benefits and costs.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Button Text -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_BUTTON_GUID</GUID>
+      <Text>Button Label</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Button Tooltip -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_BUTTON_GUID</GUID>
+      <Text>Tooltip text explaining what this button does.</Text>
+      <Description>True</Description>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Dialog Title -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_DIALOG_TITLE_GUID</GUID>
+      <Text>Dialog Title</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Dialog Body -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_DIALOG_BODY_GUID</GUID>
+      <Text>Dialog body text with detailed information or instructions.</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Error Message -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_ERROR_GUID</GUID>
+      <Text>Error: Something went wrong. Please check your settings.</Text>
+    </Text>
+  </ModOp>
+  
+  <!-- TEMPLATE: Tutorial Text -->
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>YOUR_TUTORIAL_GUID</GUID>
+      <Text>Tutorial: Step-by-step instructions on how to use this feature.</Text>
+    </Text>
+  </ModOp>
+  
+  <!--
+    LOCALIZATION GUIDELINES:
+    
+    English:
+    - Use clear, concise language
+    - Avoid slang or idioms
+    - Keep sentences short
+    - Use proper capitalization
+    
+    German:
+    - Use formal "Sie" form in instructions
+    - Follow German capitalization rules (nouns capitalized)
+    - Compound words appropriately
+    - Maintain consistency with base game terminology
+    
+    General:
+    - Keep translations equivalent in meaning, not literal
+    - Respect character limits if UI has constraints
+    - Test in-game to ensure text displays correctly
+    - Maintain consistent terminology throughout
+    - Use the same terms as the base game when possible
+  -->
+  
+</ModOps>
